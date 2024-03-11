@@ -1,0 +1,21 @@
+application:
+  name: gymmember
+server:
+  port: 8080
+mybatis:
+  type-aliases-package: com.example.model
+  mapper-locations: classpath:mappers/*xml
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/gymmanage?serverTimezone=UTC
+    username: root
+    password: root
+  session:
+    store-type: jdbc
+    jdbc:
+      initialize-schema: always
+  redis:
+    host: 192.168.190.158
+    port: 6379
+    database: 0
