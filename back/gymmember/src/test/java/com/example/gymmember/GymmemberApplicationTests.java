@@ -2,6 +2,7 @@ package com.example.gymmember;
 
 import com.example.dao.memberDao;
 import com.example.dao.userDao;
+import com.example.dao.venueDao;
 import com.example.model.user;
 import com.example.service.memberService;
 import org.junit.jupiter.api.Test;
@@ -45,6 +46,13 @@ class GymmemberApplicationTests {
         us.setType("Member");
         us.setPasswd("123");
         usDao.insert(us);
+    }
+
+    @Autowired
+    private venueDao vend;
+    @Test
+    void testvenGetAll(){
+        System.out.println(vend.findAll());
     }
 
 }
