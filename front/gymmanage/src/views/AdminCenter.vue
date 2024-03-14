@@ -19,7 +19,7 @@
             <router-link to="/AdminMem">
               <el-menu-item index="1">
                 <template #title>
-                  <el-icon><location /></el-icon>
+                  <el-icon><Avatar /></el-icon>
                   <span>会员管理</span>
                 </template>
               </el-menu-item>
@@ -34,16 +34,32 @@
 
             <router-link to="/AdminCoach">
               <el-menu-item index="3">
-                <el-icon><Document /></el-icon>
+                <el-icon><Soccer /></el-icon>
                 <span>教练管理</span>
               </el-menu-item>
             </router-link>
 
             <router-link to="/AdminOrder">
               <el-menu-item index="4">
-                <el-icon><Avatar /></el-icon>
+                <el-icon><Document /></el-icon>
                 <span>订单查询</span>
               </el-menu-item>
+            </router-link>
+
+            <router-link to="/AdminVenue">
+              <el-menu-item index="4">
+                <el-icon><FullScreen /></el-icon>
+                <span>场地管理</span>
+              </el-menu-item>
+            </router-link>
+
+            <router-link to="/" @click="quit">
+              <el-menu-item index="5">
+                <template #title>
+                  <el-icon><MoonNight /></el-icon>
+                  <span>退出登录</span>
+                </template>
+            </el-menu-item>
             </router-link>
 
           </el-menu>
@@ -59,15 +75,25 @@
 </template>
 
 <script>
-import {Location, Menu ,Document,Avatar} from '@element-plus/icons'
+import axios from "axios";
+import {Menu, Document, Avatar, MoonNight, Soccer, FullScreen} from '@element-plus/icons'
 export default {
-  components:{
-    Location,
+  components: {
+    MoonNight,
+    Avatar,
     Menu,
     Document,
-    Avatar
+    FullScreen,
+    Soccer
   },
   name: "AdminCenter",
+  methods :{
+    quit(){
+      axios.get('http://localhost:8080/logout').then((res) =>{
+        console.log((res.data))
+      })
+    }
+  }
 }
 </script>
 

@@ -12,6 +12,7 @@ import TestLogin from "@/views/TestLogin";
 import registerView from "@/views/registerView";
 import LoginView from "@/views/LoginView";
 import AdminOrder from "@/views/AdminOrder";
+import AdminVenue from "@/views/AdminVenue.vue";
 
 
 const routes = [
@@ -64,7 +65,7 @@ const routes = [
     ]
   },
 
-  //此处为管理员界面的三个功能路由
+  //此处为管理员界面的若干功能路由
   {
     path:'/AdminCenter',
     component: AdminCenter,
@@ -85,6 +86,10 @@ const routes = [
       {
         path:'/AdminOrder',
         component: AdminOrder
+      },
+      {
+        path:'/AdminVenue',
+        component: AdminVenue
       }
     ]
   },
