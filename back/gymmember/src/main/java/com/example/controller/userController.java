@@ -2,6 +2,10 @@ package com.example.controller;
 
 import com.example.dao.userDao;
 import com.example.model.user;
+import org.apache.shiro.SecurityUtils;
+import org.apache.shiro.authc.AuthenticationException;
+import org.apache.shiro.authc.UsernamePasswordToken;
+import org.apache.shiro.subject.Subject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
@@ -38,10 +42,21 @@ public class userController {
     @RequestMapping(value = "/selectUserName", method = RequestMethod.POST)
     public String selectUserAccount(@RequestBody user us) {
         user getu=us;
-        if(getu.getAccount().startsWith("G"))
-            return "Admin";
-        else return "Member";
+//        if(getu.getAccount().startsWith("G"))
+//            return "Admin";
+//        else return "Member";
 
+        //test
+        Subject currentUser = SecurityUtils.getSubject();
+        if (!currentUser.isAuthenticated()) {
+            UsernamePasswordToken token = new UsernamePasswordToken(getu.getAccount(), getu.getPasswd());
+            currentUser.login(token);
+            if (getu.getAccount().startsWith("G"))
+                return "Admin";
+            else return "Member";
+        }
+        else return "Failed";
+        //test
     }
 //        String userAccount = us.getAccount();
 //        String userPassword = us.getPasswd();

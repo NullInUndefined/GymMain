@@ -178,7 +178,7 @@
 
 <script>
 import axios from "axios";
-
+axios.defaults.withCredentials = true// 允许当前axios携带cookie
 export default {
   name: "MemCoach",
   data(){
