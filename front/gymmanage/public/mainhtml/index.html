@@ -1,0 +1,535 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Home</title>
+<link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="js/jquery.min.js"></script>
+<!---- start-smoth-scrolling---->
+<script type="text/javascript" src="js/move-top.js"></script>
+<script type="text/javascript" src="js/easing.js"></script>
+<script type="text/javascript">
+			jQuery(document).ready(function($) {
+				$(".scroll").click(function(event){		
+					event.preventDefault();
+					$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+				});
+			});
+		</script>
+<!---- start-smoth-scrolling---->
+ <!-- Custom Theme files -->
+<link href="css/style.css" rel='stylesheet' type='text/css' />
+<!-- Custom Theme files -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+
+<!----webfonts---->
+<link href='http://fonts.googleapis.com/css?family=Oswald:300,400,700' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Droid+Serif' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+<!----//webfonts---->
+<!----start-top-nav-script---->
+		<script>
+			$(function() {
+				var pull 		= $('#pull');
+					menu 		= $('nav ul');
+					menuHeight	= menu.height();
+				$(pull).on('click', function(e) {
+					e.preventDefault();
+					menu.slideToggle();
+				});
+				$(window).resize(function(){
+	        		var w = $(window).width();
+	        		if(w > 320 && menu.is(':hidden')) {
+	        			menu.removeAttr('style');
+	        		}
+	    		});
+			});
+		</script>
+<!----//End-top-nav-script---->
+</head>
+<body>
+		<!-----start-container---->
+			<!----- 头部页面---->
+			<div id="home" class="header">
+				<div class="container">
+					<div class="logo">
+						<a href="#"><img src="images/logo.png" title="logo" /></a>
+					</div>
+					<!----start-top-nav---->
+					 <nav class="top-nav">
+						<ul class="top-nav">
+							<li class="active"><a href="#home" class="scroll">首页</a></li>
+							<li class="page-scroll"><a href="#features" class="scroll">俱乐部特色</a></li>
+							<li class="page-scroll"><a href="#team" class="scroll">我们的团队</a></li>
+							<li class="page-scroll"><a href="#gallery" class="scroll">画廊</a></li>
+<!--							<li class="page-scroll"><a href="http://localhost:8080/#/TestLogin" class="scroll">login</a></li>-->
+<!--							<li class="page-scroll"><a href="#partner" class="scroll">partners</a></li>-->
+							<li class="contatct-active" class="page-scroll"><a href="#contact" class="scroll">联系我们</a></li>
+						</ul>
+						<a href="#" id="pull"><img src="images/nav-icon.png" title="menu" /></a>
+					</nav>
+					<div class="clearfix"> </div>
+					<div class="contact-info">
+						<p><span><label> </label></span>15135219446</p>
+					</div>
+				</div>
+			</div>
+			<!----- //End-header---->
+			<!----start-slider-script---->
+			<script src="js/responsiveslides.min.js"></script>
+			 <script>
+			    // You can also use "$(window).load(function() {"
+			    $(function () {
+			      // Slideshow 4
+			      $("#slider4").responsiveSlides({
+			        auto: true,
+			        pager: true,
+			        nav: true,
+			        speed: 500,
+			        namespace: "callbacks",
+			        before: function () {
+			          $('.events').append("<li>event fired.</li>");
+			        },
+			        after: function () {
+			          $('.events').append("<li>after event fired.</li>");
+			        }
+			      });
+			
+			    });
+			  </script>
+			<!----//End-slider-script---->
+			<!-- Slideshow 4 -->
+			    <div  id="top" class="callbacks_container">
+			      <ul class="rslides" id="slider4">
+			        <li>
+			          <img src="images/slide1.jpg" alt="">
+			          <div class="caption">
+			          	<div class="slide-text-info">
+			          		<span>完美时间</span>
+			          		<h1>最佳健身方案</h1>
+			          		<label>您最好的选择</label>
+			          	</div>
+			          </div>
+			        </li>
+			        <li>
+			          <img src="images/slide2.jpg" alt="">
+			          <div class="caption">
+			          	<div class="slide-text-info">
+			          		<span>完美时间</span>
+			          		<h1>最佳健身方案</h1>
+			          		<label>您最好的选择</label>
+			          	</div>
+			          </div>
+			        </li>
+			        <li>
+			          <img src="images/slide3.jpg" alt="">
+			           <div class="caption">
+			           	<div class="slide-text-info">
+			          		<span>完美时间</span>
+			          		<h1>最佳健身方案</h1>
+			          		<label>您最好的选择</label>
+			          	</div>
+			          </div>
+			        </li>
+			      </ul>
+			    </div>
+			    <div class="clearfix"> </div>
+			<!----- //End-slider---->
+			<!-----start-fearures---->
+			<div class="features" id="features">
+				<div class="container">
+					<div class="features-head text-center">
+						<h2>欢迎来到 Fitness<span>Time!</span></h2>
+						<p>强健你的身体. 毕竟你长居于此.</p>
+					</div>
+					<div class="feature-grids">
+						<div class="col-md-3 feature-grid">
+							<h3><span class="fea-icon1"> </span> 力量训练</h3>
+							<p>如各种徒手健美操、韵律操、形体操以及各种自抗力动作。也可以采用各种不同的运动器械进行各种练习，如哑铃、杠铃、壶铃等举重器械，单杠、双杠、绳、杆等体操器械，以及弹簧拉力器、滑轮拉力器、橡筋带和各种特制的综合力量练习架等力量训练器械</p>
+						</div>
+						<div class="col-md-3 feature-grid">
+							<h3><span class="fea-icon2"> </span> 有氧健身</h3>
+							<p>强度低、有节奏、不中断，持续时间长。就是指长时间进行运动（耐力运动），使得心（血液循环系统）、肺（呼吸系统）得到充分的有效刺激，提高心、肺功能。从而让全身各组织、器官得到良好的氧气和营养供应，维持最佳的功能状况。这种健身过程可增加人体对氧气的吸入、输送和使用，提高机体的耗氧量，改善呼吸和心血管系统功能</p>
+						</div>
+						<div class="col-md-3 feature-grid">
+							<h3><span class="fea-icon3"> </span> 水上运动</h3>
+							<p>游泳素有“运动之王”的美称，这主要得益于游泳能避免常规运动可能会对人体关节造成的损伤，而且健康益处多多，老少皆宜。很多运动员在伤后康复期都会通过游泳来帮助恢复，而且游泳不需要多专业的设施，一池碧水足矣。</p>
+						</div>
+						<div class="col-md-3 feature-grid">
+							<h3><span class="fea-icon4"> </span>精神与身体</h3>
+							<p>通过冥想和瑜伽来进入深度的宁静状态而增强自我知识和良好状态。 就是停止知性和理性的大脑皮质作用，而使自律神经呈现活络状态。</p>
+						</div>
+						<div class="clearfix"> </div>
+					</div>
+				</div>
+			</div>
+			<!-----//End-fearures---->
+			<!-----start-team---->
+			<div class="team" id="team">
+				<div class="container">
+					<div class="team-head text-center">
+						<h3>金牌教练</h3>
+						<span> </span>
+					</div>
+					<div class="team-grids">
+						<div class="col-md-3 team-grid">
+							<a data-toggle="modal" data-target=".bs-example-modal-md" href="#" class="b-link-stripe b-animate-go  thickbox">
+						     <img class="p-img" src="images/t1.jpg" /><div class="b-wrapper">
+						     	<h2 class="b-animate b-from-left    b-delay03 ">
+						     		<div class="animate-head">
+						     			<div class="animate-head-left">
+						     				<h3>击剑大师</h3>
+						     				<span>是会击剑的可爱小哥哥一枚呀 </span>
+						     			</div>
+						     			<div class="clearfix"> </div>
+						     		</div>
+						     	</h2>
+						  	</div></a>
+						  	<div class="t-member-info">
+						  		<h5>孙-凯</h5>
+						  		<span>trainer</span>
+						  	</div>
+						</div>
+						<div class="col-md-3 team-grid">
+							<a data-toggle="modal" data-target=".bs-example-modal-md" href="#" class="b-link-stripe b-animate-go  thickbox">
+						     <img class="p-img" src="images/t2.jpg" /><div class="b-wrapper">
+						     	<h2 class="b-animate b-from-left    b-delay03 ">
+						     		<div class="animate-head">
+						     			<div class="animate-head-left">
+						     				<h3>南通武术家</h3>
+						     				<span>是南通中的武术强者，擅长摔跤 </span>
+						     			</div>
+						     			<div class="clearfix"> </div>
+						     		</div>
+						     	</h2>
+						  	</div></a>
+						  	<div class="t-member-info">
+						  		<h5>雨凡-戴</h5>
+						  		<span>trainer</span>
+						  	</div>
+						</div>
+						<div class="col-md-3 team-grid">
+							<a data-toggle="modal" data-target=".bs-example-modal-md" href="#" class="b-link-stripe b-animate-go  thickbox">
+						     <img class="p-img" src="images/t3.jpg" /><div class="b-wrapper">
+						     	<h2 class="b-animate b-from-left    b-delay03 ">
+						     		<div class="animate-head">
+						     			<div class="animate-head-left">
+						     				<h3>羽毛球打的挺好</h3>
+						     				<span>挺好的，嗯，挺好的</span>
+						     			</div>
+						     			<div class="clearfix"> </div>
+						     		</div>
+						     	</h2>
+						  	</div></a>
+						  	<div class="t-member-info">
+						  		<h5>伟良-洪</h5>
+						  		<span>trainer</span>
+						  	</div>
+						</div>
+						<div class="col-md-3 team-grid">
+							<a data-toggle="modal" data-target=".bs-example-modal-md" href="#" class="b-link-stripe b-animate-go  thickbox">
+						     <img class="p-img" src="images/t4.jpg" /><div class="b-wrapper">
+						     	<h2 class="b-animate b-from-left    b-delay03 ">
+						     		<div class="animate-head">
+						     			<div class="animate-head-left">
+						     				<h3>MoeIsJustice</h3>
+						     				<span>I Said:Moe is justice</span>
+						     			</div>
+						     			<div class="clearfix"> </div>
+						     		</div>
+						     	</h2>
+						  	</div></a>
+						  	<div class="t-member-info">
+						  		<h5>晨-刘</h5>
+						  		<span>trainer</span>
+						  	</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-----//End-team---->
+			<!-----start-gallery---->
+			<div class="gallery" id="gallery">
+				<div class="container">
+					<div class="gallery-head text-center">
+						<h3>俱乐部风貌</h3><span> </span>
+						<p>力争第一，创造记录，铸就辉煌是我们的的追求；坚持到底，永不言败，是我们的信念。. 在此将淋漓展现青春的魅力！</p>
+					</div>
+					<div class="gallery-grids">
+						<!----files-rquired-for-image-hover-effects----->
+						<link rel="stylesheet" type="text/css" href="css/component.css" />
+						<script src="js/modernizr.custom.js"></script>
+						<script src="js/toucheffects.js"></script>
+						<!----//files-rquired-for-image-hover-effects----->
+						<div class="col-md-3 gallery-grid grid cs-style-2">
+							<figure>
+								<img src="images/g1.jpg" alt="img02">
+								<figcaption>
+									<h3>鲁智浩</h3>
+									<span>ipsum sed risus</span>
+								</figcaption>
+							</figure>
+						</div>
+						<div class="col-md-3 gallery-grid grid cs-style-2">
+							<figure>
+								<img src="images/g2.jpg" alt="img02">
+								<figcaption>
+									<h3>柴绍荃</h3>
+									<span>ipsum sed risus.</span>
+								</figcaption>
+							</figure>
+						</div>
+						<div class="col-md-3 gallery-grid grid cs-style-2">
+							<figure>
+								<img src="images/g3.jpg" alt="img02">
+								<figcaption>
+									<h3>洪伟良</h3>
+									<span>ipsum sed risus.</span>
+								</figcaption>
+							</figure>
+						</div>
+						<div class="col-md-3 gallery-grid grid cs-style-2">
+							<figure>
+								<img src="images/g4.jpg" alt="img02">
+								<figcaption>
+									<h3>孙艺涵</h3>
+									<span>ipsum sed risus.</span>
+								</figcaption>
+							</figure>
+						</div>
+						<div class="col-md-3 gallery-grid grid cs-style-2">
+							<figure>
+								<img src="images/g5.jpg" alt="img02">
+								<figcaption>
+									<h3>刘晨</h3>
+									<span>ipsum sed risus.</span>
+								</figcaption>
+							</figure>
+						</div>
+						<div class="col-md-3 gallery-grid grid cs-style-2">
+							<figure>
+								<img src="images/g8.jpg" alt="img02">
+								<figcaption>
+									<h3>我</h3>
+									<span>ipsum sed risus.</span>
+								</figcaption>
+							</figure>
+						</div>
+						<div class="col-md-3 gallery-grid grid cs-style-2">
+							<figure>
+								<img src="images/g6.jpg" alt="img02">
+								<figcaption>
+									<h3>怎么还有</h3>
+									<span>ipsum sed risus.</span>
+								</figcaption>
+							</figure>
+						</div>
+						<div class="col-md-3 gallery-grid grid cs-style-2">
+							<figure>
+								<img src="images/g7.jpg" alt="img02">
+								<figcaption>
+									<h3>居然有八个</h3>
+									<span>ipsum sed risus.</span>
+								</figcaption>
+							</figure>
+						</div>
+						<div class="clearfix"> </div>
+					</div>
+				</div>
+			</div>
+			<!-----//End-gallery---->
+			<!-----start-pricing-plans---->
+<!--			<div class="pricing-plans" id="pricing">-->
+<!--				<div class="container">-->
+<!--					<div class="pricing-plans-head text-center">-->
+<!--						<h3>PRicing and plans</h3><span> </span>-->
+<!--					</div>-->
+<!--					<div class="pricing-plan-grids">-->
+<!--						<div class="col-md-4">-->
+<!--						 <div class="pricing-plan-grid">-->
+<!--							<div class="col-md-5 pricing-plan-grid-left text-center">-->
+<!--								<span class="p-icon1"> </span>-->
+<!--								<h4>Standard</h4>-->
+<!--								<p>$33<label>.33</label></p>-->
+<!--							</div>-->
+<!--							<div class="col-md-7 pricing-plan-grid-right">-->
+<!--								<ul class="list-unstyled">-->
+<!--									<li><span> </span><a href="#">Powerful Admin Panel</a></li>-->
+<!--									<li><span> </span><a href="#">Event Calendar Supported</a></li>-->
+<!--									<li><span> </span><a href="#">Boxed And Wide Versions</a></li>-->
+<!--									<li><span> </span><a href="#">Dark & Light Version</a></li>-->
+<!--									<li><span> </span><a href="#">Revolution Slider $15</a></li>-->
+<!--								</ul>-->
+<!--							</div>-->
+<!--							<div class="clearfix"> </div>-->
+<!--						</div>-->
+<!--						</div>-->
+<!--						<div class="col-md-4">-->
+<!--						 <div class="pricing-plan-middlegrid">-->
+<!--							<div class="col-md-5 pricing-plan-grid-left1 text-center">-->
+<!--								<span class="p-icon2"> </span>-->
+<!--								<h4>Advanced</h4>-->
+<!--								<p>$52<label>.60</label></p>-->
+<!--							</div>-->
+<!--							<div class="col-md-7 pricing-plan-grid-right">-->
+<!--								<ul class="list-unstyled">-->
+<!--									<li><span> </span><a href="#">Powerful Admin Panel</a></li>-->
+<!--									<li><span> </span><a href="#">Event Calendar Supported</a></li>-->
+<!--									<li><span> </span><a href="#">Boxed And Wide Versions</a></li>-->
+<!--									<li><span> </span><a href="#">Dark & Light Version</a></li>-->
+<!--									<li><span> </span><a href="#">Revolution Slider $15</a></li>-->
+<!--								</ul>-->
+<!--							</div>-->
+<!--							<div class="clearfix"> </div>-->
+<!--						</div>-->
+<!--						</div>-->
+<!--						<div class="col-md-4">-->
+<!--						 <div class="pricing-plan-grid">-->
+<!--							<div class="col-md-5 pricing-plan-grid-left text-center">-->
+<!--								<span class="p-icon3"> </span>-->
+<!--								<h4>Business</h4>-->
+<!--								<p>$84<label>.20</label></p>-->
+<!--							</div>-->
+<!--							<div class="col-md-7 pricing-plan-grid-right">-->
+<!--								<ul class="list-unstyled">-->
+<!--									<li><span> </span><a href="#">Powerful Admin Panel</a></li>-->
+<!--									<li><span> </span><a href="#">Event Calendar Supported</a></li>-->
+<!--									<li><span> </span><a href="#">Boxed And Wide Versions</a></li>-->
+<!--									<li><span> </span><a href="#">Dark & Light Version</a></li>-->
+<!--									<li><span> </span><a href="#">Revolution Slider $15</a></li>-->
+<!--								</ul>-->
+<!--							</div>-->
+<!--							<div class="clearfix"> </div>-->
+<!--						</div>-->
+<!--						</div>-->
+<!--						<div class="clearfix"> </div>-->
+<!--					</div>-->
+<!--				</div>-->
+<!--			</div>-->
+			<!-----//End-pricing-plans---->
+
+		<!-----//End-container---->
+	        <div class="gallery" id="partner">
+				<div class="container">
+					<div class="gallery-head text-center">
+					  <h3>Partners</h3><span> </span>
+					</div>
+					<ul id="flexiselDemo3">
+						<li><img src="images/c1.png" /></li>
+						<li><img src="images/c2.png" /></li>
+						<li><img src="images/c3.png" /></li>
+						<li><img src="images/c4.png" /></li>
+						<li><img src="images/c5.png" /></li>
+						<li><img src="images/c6.png" /></li>
+					</ul>
+	<script type="text/javascript">
+$(window).load(function() {
+	$("#flexiselDemo3").flexisel({
+		visibleItems: 5,
+		animationSpeed: 1000,
+		autoPlay: true,
+		autoPlaySpeed: 3000,    		
+		pauseOnHover: true,
+		enableResponsiveBreakpoints: true,
+    	responsiveBreakpoints: { 
+    		portrait: { 
+    			changePoint:480,
+    			visibleItems: 1
+    		}, 
+    		landscape: { 
+    			changePoint:640,
+    			visibleItems: 2
+    		},
+    		tablet: { 
+    			changePoint:768,
+    			visibleItems: 3
+    		}
+    	}
+    });
+    
+});
+</script>
+<script type="text/javascript" src="js/jquery.flexisel.js"></script>
+</div>
+</div>
+  <div class="footer">
+  	<div class="container">
+	   <div class="footer-top">
+		    <ul class="twitter_footer">
+		 	 <li>
+		 	   <i class="twt_icon"> </i><p>社交媒体上请私信官方账号，我们会在两日内进行回复 <span class="m_6"></span></p>
+		 	   <div class="clearfix"> </div>
+		 	 </li>
+		 	</ul>
+		 	<div class="social">
+			   <ul>
+				 <li><a href=""> <i class="facebook"> </i> </a></li>
+				 <li><a href=""><i class="twitter"> </i> </a></li>
+				 <li><a href=""><i class="pinterest"> </i> </a></li>
+				 <li><a href=""><i class="google"> </i> </a></li>
+				 <li><a href=""><i class="tw"> </i> </a></li>
+				 <li><a href=""><i class="instagram"> </i> </a></li>
+				 <li><a href=""><i class="rss"> </i> </a></li>
+				 <div class="clear"> </div>
+			  </ul>
+			</div>
+			<div class="clearfix"> </div>
+		</div>
+		<div class="footer-bottom" id="contact">
+		  <div class="container contact">
+      	  	 <div class="col-md-4 contact-top_left">
+			  <h3>关于我们</h3>
+			  <p>这是HNU——JAVA2班 13_刘洋在数据库实验课上所做课设，真要健身可以去二田跑几圈，欢迎联系我击剑摔跤</p>
+			  <ul class="contact_info">
+			  	<li><i class="mobile"> </i><span>+86 15432456789</span></li>
+			  	<li><i class="message"> </i><span class="msg">1324924567@qq.com</span></li>
+			  </ul>
+	 		 </div>
+<!--      		 <div class="col-md-8 contact-top">-->
+<!--			  <h3>Send us a message</h3>-->
+<!--			     <form method="post" action="contact-post.html">-->
+<!--					<div class="to">-->
+<!--                     	<input type="text" class="text" value="Name" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Name';}">-->
+<!--					 	<input type="text" class="text" value="Email" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Email';}" style="margin-left:20px">-->
+<!--					 	<input type="text" class="text" value="Subject" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Subject';}" style="margin-left:20px">-->
+<!--					</div>-->
+<!--					<div class="contact_bottom-textarea">-->
+<!--	                   <textarea value="Message" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Message';}">Message</textarea>-->
+<!--	                </div>-->
+<!--	                <div class="form-submit1">-->
+<!--			           <input name="submit" type="submit" id="submit" value="Submit Your Message"><br>-->
+<!--			           <p class="m_msg">Make sure you put a valid email</p>-->
+<!--					</div>-->
+<!--					<div class="clear"></div>-->
+<!--                 </form>-->
+<!--             </div>-->
+            </div>
+      	    <div class="copy">
+<!--                这句话本来是在<p>里面的<a target="_blank" href="http://sc.chinaz.com/moban/">&#x7F51;&#x9875;&#x6A21;&#x677F;</a>-->
+		       <p>Copyright &copy; 2022.Company 13_刘洋 保留一切权力.</p>
+		    </div>
+          </div>
+          <script type="text/javascript">
+				$(document).ready(function() {
+					/*
+					var defaults = {
+			  			containerID: 'toTop', // fading element id
+						containerHoverID: 'toTopHover', // fading element hover id
+						scrollSpeed: 1200,
+						easingType: 'linear' 
+			 		};
+					*/
+					
+					$().UItoTop({ easingType: 'easeOutQuart' });
+					
+				});
+			</script>
+		    <a href="#" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;">top </span></a>
+			</div>
+		</div>
+		<!----//End-footer---->
+		<!----//End-container---->  
+<div style="display:none"><script src='http://v7.cnzz.com/stat.php?id=155540&web_id=155540' language='JavaScript' charset='gb2312'></script></div>
+</body>
+</html>
