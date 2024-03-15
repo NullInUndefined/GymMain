@@ -90,7 +90,11 @@ const routes = [
       {
         path:'/AdminVenue',
         component: AdminVenue
-      }
+      },
+      {
+        path:'/Demo',
+        component: () => import('../views/Demo.vue')
+      },
     ]
   },
 ]
